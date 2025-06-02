@@ -1,4 +1,6 @@
 # ServicesDescription.md
+This document outlines the services residing on the two virtual servers within our Hyper-V environment that helps integrate with a small business. The configuration now contains INF-DC01 which is the Primary domain controller and INF-INF01 for Infrastructure support. This guarantees proper authentication, networking, file services, and other crucial infrastructure services are consistently maintained.
+
 
 ## Overview of Provided Services
 

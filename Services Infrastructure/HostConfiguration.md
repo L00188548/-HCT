@@ -1,16 +1,20 @@
 # HostConfiguration.md
+This document explains the setup of a pair of Hyper-V hosts for a small company optimizing performance, uptime, and the ease of management for vital services such as Active Directory, Domain Name System, Dynamic Host Configuration Protocol, and file sharing.
+
 
 ## 1. Physical Configuration of Hosts
 
-For this project, we’re setting up two high-performance servers using the **Dell PowerEdge R650** platform—ideal for virtualization in a compact 1U form factor. These enterprise-grade servers feature:
+For this project, we’re setting up two high-performance servers using the **Dell PowerEdge R650** platform ideal for virtualization in a compact 1U form factor. These enterprise grade servers feature:
 
-- Dual Intel Xeon Silver 4314 CPUs (32 total cores per server)
-- 256 GB DDR4 ECC memory for high reliability
-- 4 × 10TB SATA drives in a fault-tolerant RAID 10 array
-- Dual 800W redundant power supplies for uninterrupted power
-- Quad 1GbE and dual 10GbE NICs for robust network connectivity
+- **CPUs:** Dual Intel Xeon Silver 4314 CPUs (32 total cores per server)
+- **Memory:** 256 GB DDR4 ECC memory for high reliability
+- **Storage:** 4 × 10TB SATA drives in a fault-tolerant RAID 10 array
+- **Power:** Dual 800W redundant power supplies for uninterrupted power
+- **Networking:** Quad 1GbE and dual 10GbE NICs for robust network connectivity
+- **UPS:** Smart-UPS 1500VA by APC guards against power interruptions, enabling secure shutdowns.
+- **Environment:** Servers are rack-mounted in a climate-controlled data center to prevent thermal issues.
 
-Both servers will be rack-mounted and connected to an **APC Smart-UPS 1500VA** to guard against power interruptions and allow for safe shutdowns if needed.
+These specs balance performance and cost for a small business, supporting current and future VM needs.
 
 ## 2. Host Operating System
 
@@ -36,6 +40,6 @@ This configuration ensures minimal disruption even during maintenance or unexpec
 
 ## 4. Operations
 
-Day-to-day administration will be handled through **Hyper-V Manager** and **Windows Admin Center**, offering local and remote management capabilities.
+Day to day administration will be handled through **Hyper-V Manager** and **Windows Admin Center**, offering local and remote management capabilities.
 
-Monitoring will be provided by native tools such as **Prometheus** or **Zabbix** for deeper insights. Snapshots and routine backups will be aligned with our BCDR plan to safeguard VM data.
+Monitoring will be provided by native tools such as **Prometheus** for deeper insights. Snapshots and routine backups will be aligned with our BCDR plan to safeguard VM data.
